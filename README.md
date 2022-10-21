@@ -29,7 +29,7 @@
 
 ## :man_technologist: Acessando o projeto
 
-Para acessar o projeto é fácil: <a href="https://vandersann.github.io/Sandify_Player_de_Musica/" target="_blank"><kbd>click aqui</kbd></a> ou aponte seu celular | <img src="/src/apresentacao/qrcode.png" height="125" width="125" alt="apresentacao do site">
+Para acessar o projeto é fácil: <a href="https://vandersann.github.io/Sandify_Player_de_Musica/" target="_blank"><kbd>click aqui</kbd></a> ou aponte seu celular | <img src="assets/img/qr.png" height="125" width="125" alt="apresentacao do site">
 :--------- | :---------
 
 ## :ok_hand: Contribuindo com o Sandify_Player_de_Musica
