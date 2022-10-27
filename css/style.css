@@ -6,6 +6,7 @@
     src: url(/assets/font/circle.otf) format('opentype');
     font-weight: normal;
 }
+
 /* Variables */
 :root {
 
@@ -14,7 +15,7 @@
 }
 
 /* GENERIC STYLES */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,13 +23,14 @@
 }
 
 /* Configurando a reponsividade tbm dá altura da página */
-html, body{
+html,
+body {
     height: 100%;
 
 }
 
 /* Configurando o sidebar */
-.sidebar{
+.sidebar {
     float: left;
     width: 250px;
     padding: 10px 10px;
@@ -39,27 +41,27 @@ html, body{
     background-color: #000000;
 }
 
-.sidebar::-webkit-scrollbar{
+.sidebar::-webkit-scrollbar {
     background-color: transparent;
     width: 6px;
 }
 
-.sidebar::-webkit-scrollbar-thumb{
+.sidebar::-webkit-scrollbar-thumb {
     background-color: rgb(59, 59, 59);
     border-radius: 4px;
     border-right: 2px solid black;
 }
 
-.sidebar-wrapper{
+.sidebar-wrapper {
     padding-bottom: 200px;
 }
 
-.sidebar__menu{
+.sidebar__menu {
     margin: 20px 0;
-    color: rgb(190,190, 190);
+    color: rgb(190, 190, 190);
 }
 
-.sidebar__logo img{
+.sidebar__logo img {
     /*Boas praticas de disingner responsivo, o max-widt para encaixar a img no sidebar e o witdh para ele não ultrapassar a largura*/
     max-width: 250px;
     width: 80%;
@@ -67,8 +69,9 @@ html, body{
     margin: auto;
     padding: 10px 0;
 }
+
 /* Prendendo os links do menu em coluna no sidebar */
-.sidebar__menu a{
+.sidebar__menu a {
     color: rgb(190, 190, 190);
     text-decoration: none;
     display: block;
@@ -76,11 +79,12 @@ html, body{
 }
 
 /* O svg é por conta da biblioteca de icones, mesmo estando dentro do <i>, ele é um svg */
-.sidebar__menu svg{
+.sidebar__menu svg {
     margin: 0 20px;
 }
+
 /* O men */
-.sidebar__menu a.sidebar__menu__selected{
+.sidebar__menu a.sidebar__menu__selected {
     color: rgb(250, 250, 250);
     border-radius: 5px;
 }
@@ -89,19 +93,19 @@ html, body{
     color: rgb(250, 250, 250);
 }
 
-.sidebar__menu__item{
+.sidebar__menu__item {
     margin-top: 12px;
     cursor: pointer;
     vertical-align: middle;
 }
 
-.sidebar__menu p.sidebar__menu__tittle{
+.sidebar__menu p.sidebar__menu__tittle {
     color: rgb(250, 250, 250);
     text-transform: uppercase;
     font-size: 14px;
 }
 
-.sidebar__menu__item__component{
+.sidebar__menu__item__component {
     width: 18.5px;
     height: 19px;
     text-align: center;
@@ -113,7 +117,7 @@ html, body{
     margin: 0 19px;
 }
 
-.sidebar__menu__item span{
+.sidebar__menu__item span {
     font-weight: bold;
     font-size: 14px;
 }
@@ -122,7 +126,7 @@ html, body{
     color: rgb(250, 250, 250);
 }
 
-.sidebar__menu__item img{
+.sidebar__menu__item img {
     width: 20px;
     height: 20px;
     /* Macete para alinhar ítens na verticarl */
@@ -131,25 +135,25 @@ html, body{
     margin: 0 18px;
 }
 
-.sidebar__playlist{
+.sidebar__playlist {
     padding: 20px 0;
     border-top: 1px solid rgb(40, 40, 40);
     margin-left: 20px;
 }
 
-.sidebar__playlist a{
+.sidebar__playlist a {
     margin: 10px 0;
     display: block;
     color: rgb(190, 190, 190);
     text-decoration: none;
 }
 
-.sidebar__playlist a:hover{
+.sidebar__playlist a:hover {
     color: rgb(250, 250, 250);
 }
 
 /* MAIN */
-.main{
+.main {
     /*Como foi utilizado 250px fixo para o sidebar, a prop. calc irá ajusta o redimensionamento do outros elementos da tela */
     width: calc(100% - 250px);
     background-color: #121212;
@@ -171,7 +175,7 @@ html, body{
     border-right: 2px solid black;
 }
 
-.main__row{
+.main__row {
     display: flex;
     /* Manipular dimensões que o  flex-box interfira no tamanho escolhido */
     flex-wrap: wrap;
@@ -181,11 +185,11 @@ html, body{
     justify-content: space-between;
 }
 
-.main-wraper{
+.main-wraper {
     padding-bottom: 200px;
 }
 
-.main__row__listen{
+.main__row__listen {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -196,7 +200,7 @@ html, body{
     margin-bottom: 10px;
 }
 
-.main__col__listen{
+.main__col__listen {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -235,15 +239,15 @@ html, body{
     font-size: 13px;
 }
 
-.main__row__title{
+.main__row__title {
     width: 100%;
 }
 
-.main__row__title h2{
+.main__row__title h2 {
     color: rgb(250, 250, 250);
 }
 
-.main__col{
+.main__col {
     /* cursor pointer para facilitar na fução de tocar a música ao clicar no JS */
     cursor: pointer;
     /* Para espassar corretamente os 9 itens na tela, 100%/9 itens = 11,1% e apropriando com o espaçamento entre linhas */
@@ -254,43 +258,48 @@ html, body{
     background-color: #1a1a1a;
     border-radius: 8px;
 
-    padding: 23px;
+    padding: 15px;
 
     align-items: center;
 }
 
-.main__col:hover{
+.main__col:hover {
     background-color: #2a2a2a;
 }
 
 .main__col img {
-    width: 140px;
-    height: 140px;
+    width: 90%;
+    height: 55%;
+    margin: 4px 4px;
 }
 
-.main__col h3{
+.main__col h3 {
     color: rgb(250, 250, 250);
     margin: 8px 0;
     text-align: left;
     font-size: 13px;
+    margin-left: 10px;
+    width: 90%;
 }
 
-.main__col p{
+.main__col p {
     color: rgb(120, 120, 120);
     margin: 8px 0;
     font-size: 13px;
     text-align: left;
+    margin-left: 10px;
+    width: 90%;
 }
 
 /* Player */
-.player{
+.player {
     width: 100%;
     padding: 0 16px;
     height: 90px;
     position: absolute;
     left: 0;
     bottom: 0;
-    display:flex;
+    display: flex;
     background-color: rgb(24, 24, 24);
     display: none;
     align-items: center;
@@ -302,17 +311,17 @@ html, body{
     display: flex;
 }
 
-.player__artist{
+.player__artist {
     width: 20%;
 }
 
-.player__artist img{
+.player__artist img {
     max-width: 15%;
     display: inline-block;
     vertical-align: middle;
 }
 
-.player__artist h3{
+.player__artist h3 {
     display: inline-block;
     color: white;
     font-weight: normal;
@@ -321,7 +330,7 @@ html, body{
     line-height: 1.4;
 }
 
-.player__artist h3 > span{
+.player__artist h3>span {
     color: rgb(200, 200, 200);
     font-size: 13px;
 }
@@ -367,23 +376,28 @@ html, body{
 
 @media screen and (max-width: 1750px) {
     .main__col {
-        width: 15%;
-        padding: 12px;
-        margin-right: 0;
+        width: 12%;
+        padding: 15px;
+        display: block;
+        margin: 4px 10px;
+        text-align: center;
     }
 
     .main__col img {
-        width: 100px;
-        height: 100px;
-        margin-left: 7px;
+        width: 90%;
+        height: 45%;
+        margin: 4px 4px;
     }
 
     .main__col h3 {
+        width: 90%;
         margin-left: 9px;
     }
 
     .main__col p {
+        width: 90%;
         margin-left: 9px;
+        margin-bottom: 30px;
     }
 
     .main__col__listen {
@@ -391,17 +405,107 @@ html, body{
     }
 }
 
-@media screen and (max-width: 1315px) {
+@media screen and (max-width: 1568px) {
+    .main__col {
+        width: 14%;
+        padding: 15px;
+        display: block;
+        margin: 4px 10px;
+        text-align: center;
+    }
+
+    .main__col img {
+        width: 90%;
+        height: 45%;
+        margin: 4px 4px;
+    }
+
+    .main__col h3 {
+        width: 90%;
+        margin-left: 7px;
+    }
+
+    .main__col p {
+        width: 90%;
+        margin-left: 7px;
+        margin-bottom: 30px;
+    }
+
+    .main__col__listen {
+        width: 30%;
+    }
+
+}
+
+
+@media screen and (max-width: 1323px) {
 
     .player__artist {
+        width: 30%;
+    }
+
+    .main__col {
+        width: 14%;
+        padding: 15px;
+        display: block;
+        margin: 4px 10px;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .main__col img {
+        width: 90%;
+        height: 45%;
+        margin: 4px 4px;
+    }
+
+    .main__col h3 {
+        width: 90%;
+        margin-left: 3px;
+        font-size: 12px;
+    }
+
+    .main__col p {
+        width: 90%;
+        margin-left: 3px;
+        font-size: 12px;
+    }
+
+    .main__col__listen {
         width: 30%;
     }
 }
 
 @media screen and (max-width: 1250px) {
 
-    .main__col, .main__col__listen {
+    .main__col {
+        width: 15%;
+        padding: 5px;
+        display: block;
+        margin: 4px 4px;
+    }
+
+    .main__col__listen {
         width: 30%;
+    }
+
+    .main__col img {
+        width: 90%;
+        height: 45%;
+        margin: 4px 4px;
+    }
+
+    .main__col h3 {
+        width: 90%;
+        margin-left: 6px;
+        font-size: 11px;
+    }
+
+    .main__col p {
+        width: 90%;
+        margin-left: 6px;
+        margin-bottom: 30px;
+        font-size: 10px;
     }
 }
 
@@ -422,11 +526,67 @@ html, body{
     .player__artist {
         width: 35%;
     }
+
+    .main__col {
+        width: 30%;
+        padding: 5px;
+        display: block;
+        margin: 4px 4px;
+    }
+
+    .main__col__listen {
+        width: 30%;
+    }
+
+    .main__col img {
+        width: 90%;
+        height: 60%;
+        margin: 4px 4px;
+    }
+
+    .main__col h3 {
+        width: 90%;
+        margin-left: 12px;
+        font-size: 12px;
+    }
+
+    .main__col p {
+        width: 90%;
+        margin-left: 12px;
+        margin-bottom: 30px;
+        font-size: 12px;
+    }
+
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 860px) {
     .player {
         padding: 20px 10px 20px 10px;
+    }
+
+    .main__col {
+        width: 25%;
+        padding: 5px;
+        display: block;
+        margin: 4px 4px;
+    }
+
+    .main__col img {
+        width: 75%;
+        height: 45%;
+        margin: 4px 14px;
+    }
+
+    .main__col h3 {
+        width: 90px;
+        margin-left: 14px;
+        font-size: 11px;
+    }
+
+    .main__col p {
+        width: 90px;
+        margin-left: 14px;
+        font-size: 11px;
     }
 }
 
@@ -447,7 +607,8 @@ html, body{
         float: none;
     }
 
-    .main__row, .main__row__listen {
+    .main__row,
+    .main__row__listen {
         justify-self: center;
     }
 
@@ -465,9 +626,31 @@ html, body{
         display: none;
     }
 
-    .main__col, .main__col__listen {
-        width: 30%;
+    .main__col {
         margin-right: 2%;
+    }
+
+
+    .main__col__listen {
+        margin-right: 2%;
+    }
+
+    .main__col img {
+        width: 90%;
+        height: 60%;
+        margin: 4px 4px;
+    }
+
+    .main__col h3 {
+        width: 90%;
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    .main__col p {
+        width: 90%;
+        margin-left: 10px;
+        font-size: 12px;
     }
 }
 
@@ -484,11 +667,19 @@ html, body{
         padding: 5px 22px;
     }
 
-    .main__col, .main__col__listen {
+    .main__col {
         border-radius: 6px;
         padding: 5px;
         display: block;
         margin: 4px 4px;
+    }
+
+    .main__col__listen {
+        border-radius: 6px;
+        padding: 5px;
+        display: block;
+        margin: 4px 4px;
+        width: 25%;
     }
 
     .main__col h3 {
@@ -503,7 +694,13 @@ html, body{
 
     .main__col__listen .description__wrapper h3 {
         font-size: 12px;
-        text-align: center;
+        margin-left: 8px;
+        width: 80%;
+    }
+
+    .main__col__listen img {
+        max-width: 80%;
+        max-height: 50%;
     }
 
     .description__wrapper {
@@ -511,13 +708,24 @@ html, body{
         width: 100px;
     }
 
-    .main__col,
+    .main__col h3 {
+        margin: 4px 0;
+        font-size: 12px;
+        margin-left: 14px;
+    }
+
     .main__col__listen h3 {
         margin: 4px 0;
         font-size: 12px;
     }
 
-    .main__col,
+    .main__col p {
+        margin: 4px 4px;
+        font-size: 12px;
+        margin-left: 14px;
+        margin-bottom: 38px;
+    }
+
     .main__col__listen p {
         margin: 4px 4px;
         font-size: 10px;
@@ -568,9 +776,15 @@ html, body{
     .active {
         display: block;
     }
+
+    .main__col img {
+        width: 75%;
+        height: 45%;
+        margin: 4px 14px;
+    }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 496px) {
 
     .main__row__title h2 {
         font-size: 1.1em;
@@ -581,16 +795,16 @@ html, body{
     }
 
     .main__col h3 {
-        margin-left: 18px;
-        width: 65px;
-        font-size: 1em
+        margin-left: 10px;
+        width: 80%;
+        font-size: 11px;
     }
 
     .main__col p {
-        margin-left: 18px;
-        width: 65px;
-        font-size: 1em
-}
+        margin-left: 10px;
+        width: 80%;
+        font-size: 11px;
+    }
 
     .main__col__listen .description__wrapper h3 {
         font-size: 11px;
@@ -603,36 +817,43 @@ html, body{
     }
 
     .main__col img {
-        width: 70px;
-        height: 70px;
-        margin-left: 3px;
+        width: 80%;
+        height: 50%;
+        margin-left: 12px;
     }
-
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 344px) {
 
     .main__row__title h2 {
         font-size: 0.9em;
     }
 
+    .main__col {
+        width: 30%;
+        border-radius: 6px;
+        padding: 5px;
+        display: block;
+        margin: 4px 4px;
+    }
+
     .main__col h3 {
-        margin-left: 10px;
-        width: 70px;
-        font-size: 1em
+        margin-left: 4px;
+        width: 75%;
+        font-size: 11px;
     }
 
     .main__col p {
-        margin-left: 10px;
-        width: 70px;
-        font-size: 1em
+        margin-left: 4px;
+        width: 75%;
+        font-size: 10px;
     }
 
     .main__col__listen .description__wrapper h3 {
-        font-size: 0.6em;
+        font-size: 10px;
         text-align: left;
-        width: 70px;
-        margin-left: 0;
+        width: 75%;
+        margin-left: 4px;
     }
 
     .description__wrapper {
@@ -641,8 +862,8 @@ html, body{
     }
 
     .main__col img {
-        width: 70px;
-        height: 70px;
+        width: 92%;
+        height: 40%;
         margin-left: 3px;
     }
 
